@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C418A27151B14F9002B6B20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C418A26151B14F9002B6B20 /* UIKit.framework */; };
+		4C418A29151B14F9002B6B20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C418A28151B14F9002B6B20 /* Foundation.framework */; };
+		4C418A2B151B14F9002B6B20 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C418A2A151B14F9002B6B20 /* CoreGraphics.framework */; };
+		4C418A31151B14F9002B6B20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C418A2F151B14F9002B6B20 /* InfoPlist.strings */; };
+		4C418A33151B14F9002B6B20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C418A32151B14F9002B6B20 /* main.m */; };
+		4C418A37151B14F9002B6B20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C418A36151B14F9002B6B20 /* AppDelegate.m */; };
+		4C418A3A151B14F9002B6B20 /* ToDoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C418A39151B14F9002B6B20 /* ToDoListViewController.m */; };
+		4C418A60151B166A002B6B20 /* DBAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C418A5F151B166A002B6B20 /* DBAccess.m */; };
+		4C418A60151B166A002B6B22 /* ToDo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C418A60151B166A002B6B21 /* ToDo.m */; };
+		4CE3ADFA151C3C500088765C /* SimpleTodoIPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3ADF9151C3C500088765C /* SimpleTodoIPhone.storyboard */; };
+		4CE3AE02151C51960088765C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE3AE01151C51960088765C /* libsqlite3.dylib */; };
+		4CE3AE02151C51960088765E /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3AE02151C51960088765D /* InfoViewController.m */; };
+		4CE3AE02151C519600887662 /* AddToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE3AE02151C519600887661 /* AddToDoViewController.m */; };
+		4CE3AE02151C519600887665 /* Icoc-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3AE02151C519600887664 /* Icoc-72.png */; };
+		4CE3AE02151C519600887667 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3AE02151C519600887666 /* Icon.png */; };
+		4CE3AE02151C519600887669 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CE3AE02151C519600887668 /* Icon@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C418A22151B14F9002B6B20 /* SimpleTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C418A26151B14F9002B6B20 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4C418A28151B14F9002B6B20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C418A2A151B14F9002B6B20 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4C418A2E151B14F9002B6B20 /* SimpleTodo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleTodo-Info.plist"; sourceTree = "<group>"; };
+		4C418A30151B14F9002B6B20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C418A32151B14F9002B6B20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C418A34151B14F9002B6B20 /* SimpleTodo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleTodo-Prefix.pch"; sourceTree = "<group>"; };
+		4C418A35151B14F9002B6B20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4C418A36151B14F9002B6B20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C418A38151B14F9002B6B20 /* ToDoListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoListViewController.h; sourceTree = "<group>"; };
+		4C418A39151B14F9002B6B20 /* ToDoListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoListViewController.m; sourceTree = "<group>"; };
+		4C418A44151B14F9002B6B20 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4C418A5E151B166A002B6B20 /* DBAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBAccess.h; sourceTree = "<group>"; };
+		4C418A5F151B166A002B6B20 /* DBAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBAccess.m; sourceTree = "<group>"; };
+		4C418A60151B166A002B6B21 /* ToDo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDo.m; sourceTree = "<group>"; };
+		4C418A60151B166A002B6B23 /* ToDo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDo.h; sourceTree = "<group>"; };
+		4CE3ADF9151C3C500088765C /* SimpleTodoIPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleTodoIPhone.storyboard; sourceTree = "<group>"; };
+		4CE3AE01151C51960088765C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		4CE3AE02151C51960088765D /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		4CE3AE02151C51960088765F /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		4CE3AE02151C519600887660 /* AddToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddToDoViewController.h; sourceTree = "<group>"; };
+		4CE3AE02151C519600887661 /* AddToDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddToDoViewController.m; sourceTree = "<group>"; };
+		4CE3AE02151C519600887664 /* Icoc-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icoc-72.png"; sourceTree = "<group>"; };
+		4CE3AE02151C519600887666 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		4CE3AE02151C519600887668 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C418A1F151B14F9002B6B20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE3AE02151C51960088765C /* libsqlite3.dylib in Frameworks */,
+				4C418A27151B14F9002B6B20 /* UIKit.framework in Frameworks */,
+				4C418A29151B14F9002B6B20 /* Foundation.framework in Frameworks */,
+				4C418A2B151B14F9002B6B20 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C418A17151B14F9002B6B20 = {
+			isa = PBXGroup;
+			children = (
+				4C418A2C151B14F9002B6B20 /* SimpleToDo */,
+				4C418A25151B14F9002B6B20 /* Frameworks */,
+				4C418A23151B14F9002B6B20 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C418A23151B14F9002B6B20 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C418A22151B14F9002B6B20 /* SimpleTodo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C418A25151B14F9002B6B20 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CE3AE01151C51960088765C /* libsqlite3.dylib */,
+				4C418A26151B14F9002B6B20 /* UIKit.framework */,
+				4C418A28151B14F9002B6B20 /* Foundation.framework */,
+				4C418A2A151B14F9002B6B20 /* CoreGraphics.framework */,
+				4C418A44151B14F9002B6B20 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C418A2C151B14F9002B6B20 /* SimpleToDo */ = {
+			isa = PBXGroup;
+			children = (
+				4CE3AE02151C519600887661 /* AddToDoViewController.m */,
+				4CE3AE02151C519600887660 /* AddToDoViewController.h */,
+				4CE3AE02151C51960088765F /* InfoViewController.h */,
+				4CE3AE02151C51960088765D /* InfoViewController.m */,
+				4C418A60151B166A002B6B23 /* ToDo.h */,
+				4C418A60151B166A002B6B21 /* ToDo.m */,
+				4C418A35151B14F9002B6B20 /* AppDelegate.h */,
+				4C418A36151B14F9002B6B20 /* AppDelegate.m */,
+				4C418A38151B14F9002B6B20 /* ToDoListViewController.h */,
+				4C418A39151B14F9002B6B20 /* ToDoListViewController.m */,
+				4C418A2D151B14F9002B6B20 /* Supporting Files */,
+				4C418A5E151B166A002B6B20 /* DBAccess.h */,
+				4C418A5F151B166A002B6B20 /* DBAccess.m */,
+				4CE3ADF9151C3C500088765C /* SimpleTodoIPhone.storyboard */,
+				4CE3AE02151C519600887663 /* Res */,
+			);
+			name = SimpleToDo;
+			path = SimpleTodo;
+			sourceTree = "<group>";
+		};
+		4C418A2D151B14F9002B6B20 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C418A2E151B14F9002B6B20 /* SimpleTodo-Info.plist */,
+				4C418A2F151B14F9002B6B20 /* InfoPlist.strings */,
+				4C418A32151B14F9002B6B20 /* main.m */,
+				4C418A34151B14F9002B6B20 /* SimpleTodo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CE3AE02151C519600887663 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				4CE3AE02151C519600887668 /* Icon@2x.png */,
+				4CE3AE02151C519600887666 /* Icon.png */,
+				4CE3AE02151C519600887664 /* Icoc-72.png */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C418A21151B14F9002B6B20 /* SimpleTodo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C418A55151B14F9002B6B20 /* Build configuration list for PBXNativeTarget "SimpleTodo" */;
+			buildPhases = (
+				4C418A1E151B14F9002B6B20 /* Sources */,
+				4C418A1F151B14F9002B6B20 /* Frameworks */,
+				4C418A20151B14F9002B6B20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleTodo;
+			productName = SimpleTodo;
+			productReference = 4C418A22151B14F9002B6B20 /* SimpleTodo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C418A19151B14F9002B6B20 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 4C418A1C151B14F9002B6B20 /* Build configuration list for PBXProject "SimpleToDo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4C418A17151B14F9002B6B20;
+			productRefGroup = 4C418A23151B14F9002B6B20 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C418A21151B14F9002B6B20 /* SimpleTodo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C418A20151B14F9002B6B20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C418A31151B14F9002B6B20 /* InfoPlist.strings in Resources */,
+				4CE3ADFA151C3C500088765C /* SimpleTodoIPhone.storyboard in Resources */,
+				4CE3AE02151C519600887665 /* Icoc-72.png in Resources */,
+				4CE3AE02151C519600887667 /* Icon.png in Resources */,
+				4CE3AE02151C519600887669 /* Icon@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C418A1E151B14F9002B6B20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C418A33151B14F9002B6B20 /* main.m in Sources */,
+				4C418A37151B14F9002B6B20 /* AppDelegate.m in Sources */,
+				4C418A3A151B14F9002B6B20 /* ToDoListViewController.m in Sources */,
+				4C418A60151B166A002B6B20 /* DBAccess.m in Sources */,
+				4C418A60151B166A002B6B22 /* ToDo.m in Sources */,
+				4CE3AE02151C51960088765E /* InfoViewController.m in Sources */,
+				4CE3AE02151C519600887662 /* AddToDoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4C418A2F151B14F9002B6B20 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C418A30151B14F9002B6B20 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C418A53151B14F9002B6B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4C418A54151B14F9002B6B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C418A56151B14F9002B6B20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleTodo/SimpleTodo-Prefix.pch";
+				INFOPLIST_FILE = "SimpleTodo/SimpleTodo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4C418A57151B14F9002B6B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleTodo/SimpleTodo-Prefix.pch";
+				INFOPLIST_FILE = "SimpleTodo/SimpleTodo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C418A1C151B14F9002B6B20 /* Build configuration list for PBXProject "SimpleToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C418A53151B14F9002B6B20 /* Debug */,
+				4C418A54151B14F9002B6B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C418A55151B14F9002B6B20 /* Build configuration list for PBXNativeTarget "SimpleTodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C418A56151B14F9002B6B20 /* Debug */,
+				4C418A57151B14F9002B6B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C418A19151B14F9002B6B20 /* Project object */;
+}
