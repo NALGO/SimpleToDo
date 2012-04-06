@@ -11,6 +11,7 @@
 @synthesize todoID;
 @synthesize addDate;
 @synthesize todo;
+@synthesize priority;
 
 - (void)setDateFromUnixTime:(long long int)unixTime {
     addDate = [NSDate dateWithTimeIntervalSince1970:unixTime];

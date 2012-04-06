@@ -6,10 +6,12 @@
 
 @interface ToDo : NSObject {
     int todoID;
+    int priority;
     NSString* todo;
     NSDate* addDate;
 }
 @property(nonatomic) int todoID;
+@property(nonatomic) int priority;
 @property(nonatomic, strong) NSDate *addDate;
 @property(nonatomic, strong) NSString *todo;
 

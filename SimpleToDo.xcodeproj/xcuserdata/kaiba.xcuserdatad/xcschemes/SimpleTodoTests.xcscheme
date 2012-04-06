@@ -6,17 +6,14 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForTesting = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C418A42151B14F9002B6B20"
-               BuildableName = "SimpleTodoTests"
+               BuildableName = "SimpleTodoTests.octest"
                BlueprintName = "SimpleTodoTests"
-               ReferencedContainer = "container:SimpleToDo.xcodeproj">
+               ReferencedContainer = "container:SimpleTodo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C418A42151B14F9002B6B20"
-               BuildableName = "SimpleTodoTests"
+               BuildableName = "SimpleTodoTests.octest"
                BlueprintName = "SimpleTodoTests"
-               ReferencedContainer = "container:SimpleToDo.xcodeproj">
+               ReferencedContainer = "container:SimpleTodo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

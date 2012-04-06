@@ -16,7 +16,7 @@
                BlueprintIdentifier = "4C418A21151B14F9002B6B20"
                BuildableName = "SimpleTodo.app"
                BlueprintName = "SimpleTodo"
-               ReferencedContainer = "container:SimpleTodo.xcodeproj">
+               ReferencedContainer = "container:SimpleToDo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,9 +32,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C418A42151B14F9002B6B20"
-               BuildableName = "SimpleTodoTests.octest"
+               BuildableName = "SimpleTodoTests"
                BlueprintName = "SimpleTodoTests"
-               ReferencedContainer = "container:SimpleTodo.xcodeproj">
+               ReferencedContainer = "container:SimpleToDo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,7 +44,7 @@
             BlueprintIdentifier = "4C418A21151B14F9002B6B20"
             BuildableName = "SimpleTodo.app"
             BlueprintName = "SimpleTodo"
-            ReferencedContainer = "container:SimpleTodo.xcodeproj">
+            ReferencedContainer = "container:SimpleToDo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,7 +62,7 @@
             BlueprintIdentifier = "4C418A21151B14F9002B6B20"
             BuildableName = "SimpleTodo.app"
             BlueprintName = "SimpleTodo"
-            ReferencedContainer = "container:SimpleTodo.xcodeproj">
+            ReferencedContainer = "container:SimpleToDo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,7 +80,7 @@
             BlueprintIdentifier = "4C418A21151B14F9002B6B20"
             BuildableName = "SimpleTodo.app"
             BlueprintName = "SimpleTodo"
-            ReferencedContainer = "container:SimpleTodo.xcodeproj">
+            ReferencedContainer = "container:SimpleToDo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

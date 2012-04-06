@@ -11,6 +11,8 @@
 
 @interface DBAccess : NSObject
 + (id)instance;
+- (BOOL)needVersionUp;
+- (BOOL)versionUp;
 - (BOOL)insertTodo:(ToDo *)todo;
 - (NSArray *)selectTodo;
 - (BOOL)deleteTodo:(ToDo *)todo;

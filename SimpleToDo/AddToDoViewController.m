@@ -6,12 +6,12 @@
 #import "AddToDoViewController.h"
 #import "DBAccess.h"
 
-
 @implementation AddToDoViewController {
     DBAccess* dbAccess;
 }
 @synthesize button;
 @synthesize textField;
+@synthesize prioritySegmentedControl;
 
 #pragma mark - View lifecycle
 
@@ -30,6 +30,7 @@
         ToDo * todo = [[ToDo alloc] init];
         todo.todo = todoText;
         todo.addDate = [NSDate date];
+        todo.priority = prioritySegmentedControl.selectedSegmentIndex + 1;
         [dbAccess insertTodo:todo];
     }
     [self.navigationController popViewControllerAnimated:YES];

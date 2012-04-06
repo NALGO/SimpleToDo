@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yn9-0l-Sm5">
-                                <rect key="frame" x="20" y="59" width="280" height="35"/>
+                                <rect key="frame" x="20" y="110" width="280" height="35"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <accessibility key="accessibilityConfiguration" label=""/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -138,12 +138,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" id="KTS-26-ssF">
+                                <rect key="frame" x="20" y="59" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="暇な時"/>
+                                    <segment title="普通"/>
+                                    <segment title="重要"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="ToDo追加" id="fKH-Bm-0Ix"/>
                     <connections>
                         <outlet property="button" destination="yn9-0l-Sm5" id="T4s-Df-QiW"/>
+                        <outlet property="prioritySegmentedControl" destination="KTS-26-ssF" id="zx0-Eq-ZWp"/>
                         <outlet property="textField" destination="cXi-r7-gE6" id="xC5-S5-RqQ"/>
                     </connections>
                 </viewController>
@@ -157,6 +167,7 @@
             <relationships>
                 <relationship kind="action" name="addButtonTap"/>
                 <relationship kind="outlet" name="button" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="prioritySegmentedControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="textField" candidateClass="UITextField"/>
             </relationships>
         </class>

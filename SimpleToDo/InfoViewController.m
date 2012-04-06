@@ -6,7 +6,7 @@
 #import "InfoViewController.h"
 #define NALGO_URL @"http://www.nalgo.co.jp"
 #define SRC_URL @"https://kaibadash.github.com/SimpleTodo"
-
+#define LIB_URL0 @"https://github.com/jdg/MBProgressHUD"
 @implementation InfoViewController {
 
 }
@@ -18,7 +18,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -28,6 +28,9 @@
             break;
         case 1:
             return 2;
+            break;
+        case 2:
+            return 1;
             break;
         default:
             break;
@@ -66,6 +69,16 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell.selectionStyle = UITableViewCellSelectionStyleBlue;
             break;
+        case 2:
+            switch (indexPath.row) {
+                case 0:
+                    cell.textLabel.text = @"MBProgressHUD";
+                    cell.detailTextLabel.text = LIB_URL0;
+                    break;
+            }
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+            break;
         default:
             break;
     }
@@ -79,6 +92,9 @@
                 break;
             case 1:
                 return NSLocalizedString(@"Information", nil);
+                break;
+            case 2:
+                return NSLocalizedString(@"Library", nil);
                 break;
             default:
                 break;
@@ -99,7 +115,13 @@
                     break;
             }
             break;
-
+        case 2:
+            switch (indexPath.row) {
+                case 0:
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:LIB_URL0]];
+                    break;
+            }
+            break;
     }
 }
 

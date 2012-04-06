@@ -5,16 +5,19 @@
 #import "DBAccess.h"
 #import <sqlite3.h>
 
-#define VERSION 1
+#define VERSION 2
 #define VERSION_KEY @"VERSION_KEY"
 #define DB_FILE_NAME @"SimpleTodo.sqlite"
 #define TABLE_TODO "todo"
 #define COLUMN_TODO_ID "todo_id"
 #define COLUMN_TODO_TODO "todo"
 #define COLUMN_TODO_ADD_DATE "add_date"
+#define COLUMN_TODO_PRIORITY "priority"
+#define DEFAULT_PRIORITY "2"
 #define SQL_CREATE_TABLE_TODO "create table " TABLE_TODO \
     "(" COLUMN_TODO_ID " integer primary key autoincrement," \
-    COLUMN_TODO_TODO " text, " COLUMN_TODO_ADD_DATE " integer)"
+    COLUMN_TODO_TODO " text, " COLUMN_TODO_ADD_DATE " integer," \
+    COLUMN_TODO_PRIORITY " integer default " DEFAULT_PRIORITY ")"
 
 @implementation DBAccess {
     NSRecursiveLock *lock;
@@ -81,18 +84,38 @@ static id _instance = nil;
     return self;
 }
 
+- (BOOL)needVersionUp {
+    NSInteger beforeDBVersion = [[NSUserDefaults standardUserDefaults] integerForKey:VERSION_KEY];
+    return (beforeDBVersion < VERSION);
+}
+
+- (BOOL)versionUp {
+    char *errorMsg;
+    char *query = "alter table " TABLE_TODO " add column " COLUMN_TODO_PRIORITY " default " DEFAULT_PRIORITY;
+    if (sqlite3_exec(database, query, NULL, NULL, &errorMsg) != SQLITE_OK) {
+        NSLog(@"todoテーブルのversion upに失敗");
+        return NO;
+    }
+    // DB VersionをNSUserDefaultsに保存
+    NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
+    [ud setInteger:VERSION forKey:VERSION_KEY];
+    [ud synchronize];
+    return YES;
+}
+
 - (BOOL)insertTodo:(ToDo *)todo {
-    char *query = "insert into " TABLE_TODO "(" COLUMN_TODO_TODO "," COLUMN_TODO_ADD_DATE ")"
-            " values (?, ?) ";
+    char *query = "insert into " TABLE_TODO "(" COLUMN_TODO_TODO "," COLUMN_TODO_ADD_DATE "," COLUMN_TODO_PRIORITY ")"
+            " values (?, ?, ?) ";
     sqlite3_stmt *stmt;
     if (sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
         int i = 1;
         sqlite3_bind_text(stmt, i++, [todo.todo UTF8String], -1, NULL);
-        sqlite3_bind_int(stmt, i++, (int) [todo.addDate timeIntervalSince1970]);
+        sqlite3_bind_int64(stmt, i++, (long long int)[todo.addDate timeIntervalSince1970]);
+        sqlite3_bind_int(stmt, i++, todo.priority);
     }
     BOOL result = YES;
     if (sqlite3_step(stmt) != SQLITE_DONE) {
-        NSLog(@"TODOの追加に失敗");
+        NSLog(@"todoの追加に失敗");
         result = NO;
     }
     sqlite3_finalize(stmt);
@@ -101,7 +124,7 @@ static id _instance = nil;
 
 - (NSArray *)selectTodo {
     sqlite3_stmt *stmt;
-    char *query = "select " COLUMN_TODO_ID "," COLUMN_TODO_TODO "," COLUMN_TODO_ADD_DATE " from " TABLE_TODO " order by " COLUMN_TODO_ADD_DATE " desc";
+    char *query = "select " COLUMN_TODO_ID "," COLUMN_TODO_TODO "," COLUMN_TODO_ADD_DATE "," COLUMN_TODO_PRIORITY " from " TABLE_TODO " order by " COLUMN_TODO_PRIORITY " desc," COLUMN_TODO_ADD_DATE " desc";
     NSMutableArray *todoArr = [NSMutableArray array];
     if (sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
         while (sqlite3_step(stmt) == SQLITE_ROW) {
@@ -110,6 +133,7 @@ static id _instance = nil;
             todo1.todoID = sqlite3_column_int(stmt, i++);
             todo1.todo = [NSString stringWithUTF8String:(char *) sqlite3_column_text(stmt, i++)];
             [todo1 setDateFromUnixTime:sqlite3_column_int(stmt, i++)];
+            todo1.priority = sqlite3_column_int(stmt, i++);
             [todoArr addObject:todo1];
             NSLog(@"%d %@ %@", todo1.todoID, todo1.todo, todo1.addDate);
         }
