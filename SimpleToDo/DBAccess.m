@@ -137,4 +137,8 @@ static id _instance = nil;
     return result;
 }
 
+- (void)dealloc {
+    [self close];
+}
+
 @end
