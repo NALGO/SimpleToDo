@@ -5,7 +5,7 @@
 
 #import "InfoViewController.h"
 #define NALGO_URL @"http://www.nalgo.co.jp"
-#define SRC_URL @"https://kaibadash.github.com/SimpleTodo"
+#define SRC_URL @"https://github.com/NALGO/SimpleToDo"
 
 @implementation InfoViewController {
 
