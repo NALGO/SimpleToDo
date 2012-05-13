@@ -58,6 +58,7 @@ static id _instance = nil;
             existsAtDBFile = YES;
         }
 
+        // sqlite3_openを使用してDBファイルを開く
         if (sqlite3_open([[self dataFilePath] UTF8String], &database) != SQLITE_OK) {
             [self close];
             NSLog(@"初期化に失敗しました");
@@ -67,6 +68,7 @@ static id _instance = nil;
         char *errorMsg;
         // テーブル作成
         if (existsAtDBFile == NO) {
+            // sqlite3_execを使用してSQLを実行する
             if (sqlite3_exec(database, SQL_CREATE_TABLE_TODO, NULL, NULL, &errorMsg) != SQLITE_OK) {
                 [self close];
                 NSLog(@"todoテーブル作成に失敗しました");
@@ -85,8 +87,10 @@ static id _instance = nil;
     char *query = "insert into " TABLE_TODO "(" COLUMN_TODO_TODO "," COLUMN_TODO_ADD_DATE ")"
             " values (?, ?) ";
     sqlite3_stmt *stmt;
+    // sqlite3_prepare_v2を使用すると、上記queryの ? の部分に後からパラメータを設定できる
     if (sqlite3_prepare_v2(database, query, -1, &stmt, nil) == SQLITE_OK) {
         int i = 1;
+        // ? にパラメータを割り当てる
         sqlite3_bind_text(stmt, i++, [todo.todo UTF8String], -1, NULL);
         sqlite3_bind_int(stmt, i++, (int) [todo.addDate timeIntervalSince1970]);
     }
@@ -107,6 +111,7 @@ static id _instance = nil;
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             int i = 0;
             ToDo *todo1 = [[ToDo alloc] init];
+            // sqlite3_column_intを使用してsqlite3_prepare_v2の結果からintのパラメータを取得する
             todo1.todoID = sqlite3_column_int(stmt, i++);
             todo1.todo = [NSString stringWithUTF8String:(char *) sqlite3_column_text(stmt, i++)];
             [todo1 setDateFromUnixTime:sqlite3_column_int(stmt, i++)];

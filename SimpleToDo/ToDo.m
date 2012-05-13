@@ -12,6 +12,7 @@
 @synthesize addDate;
 @synthesize todo;
 
+// UNIX timeからNSDateへ変換して設定する
 - (void)setDateFromUnixTime:(long long int)unixTime {
     addDate = [NSDate dateWithTimeIntervalSince1970:unixTime];
 }

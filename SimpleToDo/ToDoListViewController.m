@@ -8,7 +8,7 @@
 @implementation ToDoListViewController {
     DBAccess* dbAccess;
     NSArray* todoList;
-    ToDo * targetTodo;
+    ToDo * targetTodo; // 削除対象のToDoを記憶するためのメンバ変数
 }
 @synthesize rightBarButton;
 
@@ -23,6 +23,8 @@
     dbAccess = [DBAccess instance];
 }
 
+// ToDo追加画面から戻ってきたときに、再読込するためにviewWillAppearでToDo取得を行う
+// ToDo追加画面から戻ってきたときに、再読込するためにviewWillAppearでToDo取得を行う
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillDisappear:animated];
     todoList = [dbAccess selectTodo];
